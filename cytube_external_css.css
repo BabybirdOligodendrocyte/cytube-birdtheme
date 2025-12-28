@@ -1,3 +1,6 @@
+/* Import bokitube base theme */
+@import url('https://cdn.jsdelivr.net/gh/deafnv/bokitube-server@master/channel/style.min.css');
+
 /* ===================================
    ALTAR OF VICTORY - CUSTOM CYTUBE THEME
    Complete external stylesheet
@@ -675,6 +678,10 @@ div#emotewrap,
         grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
     }
     
+    .timestamp {
+        display: none;
+    }
+}
     .timestamp {
         display: none;
     }
