@@ -1,9 +1,21 @@
 /* ===================================
    ALTAR OF VICTORY - CUSTOM CYTUBE SCRIPT
    Complete external JavaScript
+   First loads bokitube, then custom features
    =================================== */
 
+// Load bokitube script first
 (function() {
+    var bokitubeScript = document.createElement('script');
+    bokitubeScript.src = 'https://cdn.jsdelivr.net/gh/deafnv/bokitube-server@master/channel/script.min.js';
+    bokitubeScript.onload = function() {
+        console.log('[Altar of Victory] Bokitube loaded, initializing custom features...');
+        initializeCustomFeatures();
+    };
+    document.head.appendChild(bokitubeScript);
+})();
+
+function initializeCustomFeatures() {
     'use strict';
     
     console.log('[Altar of Victory] Loading custom scripts...');
@@ -545,5 +557,6 @@
     window.ProfileViewer = ProfileViewer;
     
     console.log('[Altar of Victory] ✓ All systems loaded successfully!');
+}
     
 })();
